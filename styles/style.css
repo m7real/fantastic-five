@@ -8,13 +8,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;700;800&display=swap');
 
+body {
+        font-family: 'Manrope', sans-serif;
+}
+
 .bg-light-black {
         background-color: #151515;
         color: #fff;
 }
 
 .bg-dark-black {
-        background-color: black;
+        background-color: rgba(9, 9, 9, 0.952);
         color: white;
 }
 
