@@ -1,0 +1,24 @@
+/* 
+        font-family: 'Berkshire Swash',
+        cursive;
+    
+        font-family: 'Manrope',
+        sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;700;800&display=swap');
+
+.bg-light-black {
+        background-color: #151515;
+        color: #fff;
+}
+
+.bg-dark-black {
+        background-color: black;
+        color: white;
+}
+
+header h1 {
+        font-family: 'Berkshire Swash', cursive;
+        color: #FF5E19;
+}
