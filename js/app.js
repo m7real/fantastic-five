@@ -1,7 +1,9 @@
 // Utility Functions
+
+// for Multiple Use
 function getFieldValueById(id) {
-  const element = document.getElementById(id);
-  const value = element.value;
+  const fieldElement = document.getElementById(id);
+  const value = fieldElement.value;
   return parseInt(value);
 }
 function getTextElimentValueById(id) {
@@ -12,6 +14,22 @@ function getTextElimentValueById(id) {
 function setTextElimentValueById(id, value) {
   const element = document.getElementById(id);
   element.innerText = value;
+}
+
+// for Input Validation
+function inputValidationById(id) {
+  const inputField = document.getElementById(id);
+  const inputValue = inputField.value;
+  if (isNaN(inputValue)) {
+    alert("Input Numbers Only");
+    return false;
+  } else if (inputValue < 0) {
+    alert("Invalid Input");
+    return false;
+  } else if (inputValue === "") {
+    alert("Input Field Can Not Be Empty");
+    return false;
+  }
 }
 
 // Event Listeners
@@ -39,14 +57,22 @@ for (const button of buttons) {
   });
 }
 
+// calculate player expenses
 document.getElementById("btn-calc").addEventListener("click", function () {
+  if (inputValidationById("per-player-cost") === false) {
+    return;
+  }
   const playerNumber = document.getElementById("selected-container").childElementCount;
   const perPlayerCost = getFieldValueById("per-player-cost");
   const playerTotalCost = playerNumber * perPlayerCost;
   setTextElimentValueById("player-cost-total", playerTotalCost);
 });
 
+// calculate total cost
 document.getElementById("btn-calc-total").addEventListener("click", function () {
+  if (inputValidationById("manager-cost") === false || inputValidationById("coach-cost") === false) {
+    return;
+  }
   const playerTotalCost = getTextElimentValueById("player-cost-total");
   const managerCost = getFieldValueById("manager-cost");
   const coachCost = getFieldValueById("coach-cost");
