@@ -46,6 +46,7 @@ for (const button of buttons) {
     // disable button when clicked
     button.setAttribute("disabled", true);
     button.style.backgroundColor = "gray";
+    button.style.border = "none";
 
     // create li
     const li = document.createElement("li");
