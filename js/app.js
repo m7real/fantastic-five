@@ -1,7 +1,12 @@
 const buttons = document.getElementsByClassName("btn-select");
+const selectedContainer = document.getElementById("selected-container");
 
 for (const button of buttons) {
   button.addEventListener("click", function () {
+    if (selectedContainer.childElementCount >= 5) {
+      alert("You have already added 5 Players, Can't add more");
+      return;
+    }
     const playerName = button.previousElementSibling.innerText;
 
     // disable button when clicked
@@ -13,7 +18,6 @@ for (const button of buttons) {
     li.innerText = playerName;
     li.classList.add("ps-3");
     // add li
-    const selectedContainer = document.getElementById("selected-container");
     selectedContainer.appendChild(li);
   });
 }
