@@ -10,7 +10,8 @@ body {
 }
 
 .bg-dark-black {
-        background-color: rgba(14, 12, 12, 0.952);
+
+        background-color: #0e0c0cf3;
         color: white;
 }
 
@@ -20,6 +21,7 @@ body {
 
 header h1 {
         font-family: 'Berkshire Swash', cursive;
+        font-size: 4.75rem;
 
 }
 
