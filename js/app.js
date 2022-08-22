@@ -59,6 +59,7 @@ for (const button of buttons) {
 
 // calculate player expenses
 document.getElementById("btn-calc").addEventListener("click", function () {
+  // input validation
   if (inputValidationById("per-player-cost") === false) {
     return;
   }
@@ -70,6 +71,7 @@ document.getElementById("btn-calc").addEventListener("click", function () {
 
 // calculate total cost
 document.getElementById("btn-calc-total").addEventListener("click", function () {
+  // input validation
   if (inputValidationById("manager-cost") === false || inputValidationById("coach-cost") === false) {
     return;
   }
